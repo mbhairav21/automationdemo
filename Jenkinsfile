@@ -4,7 +4,7 @@ node(){
     }
         
     stage('Install dependencies') {
-        Slave-Aws('nodejs') {
+        nodejs('nodejs') {
             sh 'npm install'
             echo "Modules installed"
         }
@@ -33,7 +33,7 @@ node(){
     }
 }
 
-node('awsnode') {
+node('Slave-Aws') {
     echo 'Unstash'
     unstash 'buildArtifacts'
     echo 'Artifacts copied'
