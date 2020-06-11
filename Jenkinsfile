@@ -4,7 +4,7 @@ node(){
     }
         
     stage('Install dependencies') {
-        nodejs('nodejs') {
+        Slave-Aws('nodejs') {
             sh 'npm install'
             echo "Modules installed"
         }
